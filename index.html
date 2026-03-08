@@ -708,7 +708,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -839,7 +838,21 @@ body{
     );
     box-shadow:0 0 6px rgba(255,215,0,.6);
 }
-
+.starempty{
+      width:20px;
+    height:20px;
+    background:transparent;
+     background: radial-gradient(circle at 30% 30%, #fffbd1, white 40%,white 65%,white 90%);
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 
+        50% 70%, 21% 91%, 
+        32% 57%, 2% 35%, 
+        39% 35%
+    );
+    box-shadow:0 0 6px rgba(255, 255, 255, 0.6);
+    border:2px solid #ffd700;
+}
 /* Short sparkle animation */
 .star.sparkle{
     animation: sparkle .6s ease;
@@ -921,7 +934,7 @@ Even my sister noticed the glow!"
 <div class="client-name">Ayesha Khan</div>
 <div class="client-role">Lahore, Pakistan</div>
 <div class="stars">
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="starempty"></div>
 </div>
 </div>
 </div>
@@ -959,7 +972,7 @@ Totally worth the price."
 <div class="client-name">Fatima Noor</div>
 <div class="client-role">Islamabad, Pakistan</div>
 <div class="stars">
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div  <span>☆</span>></div>
+<div class="star"></div><div class="star"></div><div class="star"></div><div class="starempty"></div><div class="starempty"></div>
 </div>
 </div>
 </div>
@@ -978,7 +991,7 @@ I use it every night before sleeping."
 <div class="client-name">Hassan Raza</div>
 <div class="client-role">Faisalabad, Pakistan</div>
 <div class="stars">
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="starempty"></div>
 </div>
 </div>
 </div>
@@ -1035,7 +1048,7 @@ Skin feels refreshed and clean."
 <div class="client-name">Zainab Tariq</div>
 <div class="client-role">Peshawar, Pakistan</div>
 <div class="stars">
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="starempty"></div>
 </div>
 </div>
 </div>
@@ -1054,7 +1067,7 @@ Highly recommended."
 <div class="client-name">Imran Shah</div>
 <div class="client-role">Hyderabad, Pakistan</div>
 <div class="stars">
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+<div class="star"></div><div class="star"></div><div class="star"></div><div class="starempty"></div><div class="starempty"></div>
 </div>
 </div>
 </div>
@@ -1065,7 +1078,6 @@ Highly recommended."
 <button id="nextBtn">Next</button>
 </div>
 </section>
-
 <script>
 
 const track = document.getElementById("feedbackTrack");
@@ -1515,6 +1527,7 @@ document.addEventListener("keydown", function(event) {
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
