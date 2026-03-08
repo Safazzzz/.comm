@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>Hairnic - Single Product Website Template</title>
+    <title>SAFA'z</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
         rel="stylesheet">
-
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -31,265 +27,928 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+    .navbar-toggler {
+        border: none; /* Remove default border */
+    }
+
+    .navbar-toggler-icon {
+        background-image: none; /* Remove default icon */
+    }
+
+    .navbar-toggler:before,
+    .navbar-toggler:after,
+    .navbar-toggler span {
+        content: '';
+        display: block;
+        width: 30px; /* Width of each bar */
+        height: 4px; /* Height of each bar */
+        background-color: #ffca1a; /* Color of the bars */
+        margin: 6px auto; /* Space between bars */
+        border-radius: 2px; /* Rounded corners for bars */
+    }
+</style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+</div>
 
+<!-- TOP NAVBAR -->
+<div style="
+    width: 100%;
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+">
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a href="index.html" class="navbar-brand">
-                    <h2 class="text-white">Hairnic</h2>
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="how-to-use.html" class="dropdown-item">How To Use</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="blog.html" class="dropdown-item">Blog Articles</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                    </div>
-                    <a href="https://htmlcodex.com/downloading/?item=2727" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Buy Pro Version</a>
-                </div>
-            </nav>
-        </div>
+    <!-- Hamburger Button -->
+    <div onclick="openSidebar()" style="
+        font-size: 32px;
+        cursor: pointer;
+        color: #ffca1a;
+        font-weight: bold;
+        transition: transform 0.3s;
+    " onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+        ☰
     </div>
-    <!-- Navbar End -->
 
-
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary hero-header mb-5">
-        <div class="container text-center">
-            <h1 class="display-4 text-white mb-3 animated slideInDown">Contact</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-                </ol>
-            </nav>
-        </div>
+    <!-- Logo + Text -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+  <h2 style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    margin: 0 auto; /* Center horizontally */
+    font-weight: 800;
+    color: #ffca1a;
+    background: linear-gradient(45deg, #ffd700, #ffcc33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.35), 0 0 12px rgba(255,215,0,0.6);
+    letter-spacing: 1px;
+    padding-right: 50px; /* Corrected */
+    text-align: center; /* Center text within the element */
+">
+    SAFA'<span style="font-size:0.65em; vertical-align: middle;">Z</span>
+</h2>
+        <img src="logo.jpg" alt="Logo" style="height: 60px; width: auto; border-radius:12px; box-shadow:0 0 15px rgba(255,202,26,0.7);" />
+      
     </div>
-    <!-- Hero End -->
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" 
+     style="
+        height:100%;
+        width:260px;
+        position:fixed;
+        top:0;
+        left:-280px;
+        background: linear-gradient(180deg, #fffde7, #ffe880);
+        overflow-x:hidden;
+        transition:0.5s ease;
+        box-shadow:5px 0 25px rgba(0,0,0,0.2);
+        z-index:2000;
+        padding-top:80px;
+        border-right:2px solid #ffca1a;
+        border-radius:0 20px 20px 0;
+     ">
+
+    <!-- Close Button -->
+    <a href="javascript:void(0)" onclick="closeSidebar()" 
+       style="
+            position:absolute; 
+            top:20px; 
+            right:20px; 
+            font-size:36px; 
+            text-decoration:none; 
+            color:#ffca1a; 
+            font-weight:bold;
+            transition: transform 0.3s, color 0.3s;
+       "
+       onmouseover="this.style.transform='rotate(90deg)'; this.style.color='#ffd700';"
+       onmouseout="this.style.transform='rotate(0deg)'; this.style.color='#ffca1a';"
+    >
+        ×
+    </a>
+
+ <!-- ===== SIDEBAR LOGO ===== -->
+<div style="
+    text-align:center;
+    margin-bottom:50px;
+    position:relative;
+    z-index:2;
+">
+  <span style="
+    font-size:40px;
+    font-weight:900;
+    letter-spacing:6px;
+    background: linear-gradient(45deg, #ffca1a, #000, #ffd700, #000);
+    background-size:400% 400%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    display:inline-block;
+    animation:logoGradient 4s ease infinite;
+    text-shadow:
+        0 0 10px rgba(255,202,26,0.7),
+        0 0 20px rgba(0,0,0,0.5),
+        0 0 30px rgba(255,255,255,0.3);
+    transform: rotateX(3deg) rotateY(2deg);
+  ">
+    SAFA'z
+  </span>
+</div>
+
+<style>
+@keyframes logoGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+
+<!-- ===== MENU TITLE ===== -->
+<div style="
+    text-align:center;
+    font-size:26px;
+    font-weight:900;
+    color:#ffca1a;
+    letter-spacing:2px;
+    margin-bottom:30px;
+    text-shadow:0 0 5px #000, 0 0 10px #ffca1a;
+    animation:menuGlow 2s ease-in-out infinite alternate;
+">MENU</div>
+ 
+   <!-- Menu Links -->
+<a href="index.html" style="
+    display:block;
+    padding:18px 30px;
+    text-decoration:none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s;
+" onmouseover="this.style.background='#ffca1a'; this.style.color='black'; this.style.fontWeight='900'; this.style.boxShadow='0 0 15px rgba(255,202,26,0.7)'" 
+   onmouseout="this.style.background='transparent'; this.style.color='black'; this.style.fontWeight='700'; this.style.boxShadow='none'">
+   Home
+</a>
+
+<a href="about.html" style="
+    display:block;
+    padding:18px 30px;
+    text-decoration:none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s;
+" onmouseover="this.style.background='#ffca1a'; this.style.color='black'; this.style.fontWeight='900'; this.style.boxShadow='0 0 15px rgba(255,202,26,0.7)'" 
+   onmouseout="this.style.background='transparent'; this.style.color='black'; this.style.fontWeight='700'; this.style.boxShadow='none'">
+   About
+</a>
+
+<a href="product.html" style="
+    display:block;
+    padding:18px 30px;
+    text-decoration:none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s;
+" onmouseover="this.style.background='#ffca1a'; this.style.color='black'; this.style.fontWeight='900'; this.style.boxShadow='0 0 15px rgba(255,202,26,0.7)'" 
+   onmouseout="this.style.background='transparent'; this.style.color='black'; this.style.fontWeight='700'; this.style.boxShadow='none'">
+   Products
+</a>
+
+<a href="feature.html" style="
+    display:block;
+    padding:18px 30px;
+    text-decoration:none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s;
+" onmouseover="this.style.background='#ffca1a'; this.style.color='black'; this.style.fontWeight='900'; this.style.boxShadow='0 0 15px rgba(255,202,26,0.7)'" 
+   onmouseout="this.style.background='transparent'; this.style.color='black'; this.style.fontWeight='700'; this.style.boxShadow='none'">
+   Features
+</a>
+
+<a href="contact.html" style="
+    display:block;
+    padding:18px 30px;
+    text-decoration:none;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700;
+    font-size:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s;
+" onmouseover="this.style.background='#ffca1a'; this.style.color='black'; this.style.fontWeight='900'; this.style.boxShadow='0 0 15px rgba(255,202,26,0.7)'" 
+   onmouseout="this.style.background='transparent'; this.style.color='black'; this.style.fontWeight='700'; this.style.boxShadow='none'">
+   Contact
+</a>
+
+<!-- Button -->
+<div style="padding:25px;">
+    <a href="product.html" style="
+        display:block;
+        background:#ffca1a;
+        color:black;
+        text-align:center;
+        padding:14px;
+        font-weight:800;
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration:none;
+        border-radius:12px;
+        box-shadow:0 5px 20px rgba(255,202,26,0.6);
+        transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(255,202,26,0.8)'; this.style.fontWeight='900'" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(255,202,26,0.6)'; this.style.fontWeight='800'">
+       Buy Now
+    </a>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const menuItems = sidebar.querySelectorAll("a, div a"); // all links/buttons inside sidebar
+
+    // Prepare items: initially shifted left and invisible
+    menuItems.forEach(item => {
+        item.style.transform = "translateX(-50px)";
+        item.style.opacity = "0";
+    });
+
+    // Open sidebar with sequential animation
+    window.openSidebar = function() {
+        sidebar.style.left = "0";
+
+        menuItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.transition = "transform 0.5s ease-out, opacity 0.5s ease-out";
+                item.style.transform = "translateX(0)";
+                item.style.opacity = "1";
+            }, index * 170); // 150ms delay per item
+        });
+    }
+
+    // Close sidebar
+    window.closeSidebar = function() {
+        sidebar.style.left = "-280px";
+
+        // Reset items to start position for next open
+        menuItems.forEach(item => {
+            item.style.transition = "none";
+            item.style.transform = "translateX(-50px)";
+            item.style.opacity = "0";
+        });
+    }
+
+    // Close sidebar on click outside
+    document.addEventListener("click", function(event) {
+        if (sidebar.style.left === "0px") { 
+            const isClickInside = sidebar.contains(event.target);
+            const isHamburger = event.target.closest("[onclick='openSidebar()']");
+            if (!isClickInside && !isHamburger) {
+                closeSidebar();
+            }
+        }
+    });
+});
+</script>
 
 
-    <!-- Contact Info Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="contact-info-item position-relative bg-primary text-center p-3">
-                        <div class="border py-5 px-3">
-                            <i class="fa fa-map-marker-alt fa-3x text-dark mb-4"></i>
-                            <h5 class="text-white">Office Address</h5>
-                            <h5 class="fw-light text-white">123 Street, New York, USA</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="contact-info-item position-relative bg-primary text-center p-3">
-                        <div class="border py-5 px-3">
-                            <i class="fa fa-phone-alt fa-3x text-dark mb-4"></i>
-                            <h5 class="text-white">Call Us</h5>
-                            <h5 class="fw-light text-white">+012 345 67890</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="contact-info-item position-relative bg-primary text-center p-3">
-                        <div class="border py-5 px-3">
-                            <i class="fa fa-envelope fa-3x text-dark mb-4"></i>
-                            <h5 class="text-white">Mail Us</h5>
-                            <h5 class="fw-light text-white">info@example.com</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+<!-- Moving Text Section Begin -->
+<section style="background: #1a1a1a; overflow: hidden; position: relative; border-top: 3px solid #ffd700; border-bottom: 3px solid #ffd700; padding: 12px 0;">
+    
+    <div style="position: relative; width: 100%; overflow: hidden; border-radius: 6px; border: 2px solid #ffd700; background: rgba(255,215,0,0.05); box-shadow: 0 0 15px rgba(255,215,0,0.4);">
+
+        <!-- Shiny overlay -->
+        <div style="
+            position: absolute;
+            top: 0; left: -50%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,0,0.8), rgba(255,255,255,0.3));
+            transform: skewX(-25deg);
+            animation: shine 6s linear infinite;
+            pointer-events: none;
+        "></div>
+
+        <!-- Scrolling Text -->
+        <div style="
+            display: inline-block;
+            white-space: nowrap;
+            animation: moveText 90s linear infinite;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            text-shadow: 0 0 5px #ffd700, 0 0 10px #ffec70;
+        ">
+           🚚✨ Enjoy free delivery on all orders over 3,000 PKR.
+
+🕌🎊 The Eid Sale is live – grab your favorites with up to 30% off!
+
+💎🌟 Experience premium skincare with instant results, only at SAFA’Z.
+
+🌸💧 Treat yourself to luxury skincare for a brighter, healthier you.
+
+☀️💦✨ Let your skin brighten, hydrate, and shine – results you’ll see immediately.
+
+💛🛍️ Discover amazing prices that you’ll truly love.
+🌺🔥 Say goodbye to dull skin.
+🌿 Anti-aging & rejuvenating creams.
         </div>
+
     </div>
-    <!-- Contact Info End -->
+</section>
+<!-- PREMIUM CONTACT SECTION WITH MOVING GRADIENT -->
+<section id="contact" style="font-family:'Times New Roman',serif; background:#fffdf6; padding:50px 15px;">
 
+  <div style="max-width:1100px; margin:auto; text-align:center;">
+    <h2 style="font-size:34px; margin-bottom:10px; color:#b8860b;">Contact Us</h2>
+    
+    <div style="width:80px;height:4px;background:#ffd700;margin:10px auto 40px auto;border-radius:5px;"></div>
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="text-primary mb-5"><span class="fw-light text-dark">If You Have Any Query,</span> Please Contact Us</h1></div>
-            <div class="row g-5">
-                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
-                    <h4 class="lh-base mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=2727">Pro Version</a> only.</h4>
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
-                    <iframe class="w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-                </div>
-            </div>
+    <div class="contactGrid">
+
+      <!-- ADDRESS CARD -->
+      <div class="contactCard movingGradient" onclick="openMap()">
+        <div class="iconBox">
+          <i class="fas fa-map-marker-alt"></i>
         </div>
+        <h3>Address</h3>
+        <p>52-Riwaz Garden Lower Mall<br>Lahore, Punjab, Pakistan</p>
+      </div>
+
+      <!-- PHONE CARD -->
+      <div class="contactCard movingGradient" onclick="callNow()">
+        <div class="iconBox">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>+92-3364454964</p>
+      </div>
+
+      <!-- EMAIL CARD -->
+      <div class="contactCard movingGradient" onclick="sendEmail()">
+        <div class="iconBox">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <p>fashionplanet.official1@gmail.com</p>
+      </div>
+
     </div>
-    <!-- Contact End -->
+  </div>
+</section>
+
+<!-- ICON CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.contactGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.contactCard{
+  padding:30px 20px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.4s;
+  border:1px solid #ffe08a;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08), 0 15px 35px rgba(218,165,32,0.1);
+  position:relative;
+  overflow:hidden;
+  z-index:0;
+}
+
+.contactCard.movingGradient{
+  background: linear-gradient(-45deg, #fff8dc, #ffe08a, #fffbe0, #fff1b8, #fff8dc);
+  background-size: 400% 400%;
+  animation: gradientMove 3s ease infinite; /* faster movement */
+  border:1px solid #ffeab3; /* subtle light gold border */
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.contactCard:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15), 0 20px 45px rgba(218,165,32,0.25);
+}
+
+.contactCard h3{
+  margin:12px 0;
+  color:#b8860b;
+  font-size:20px;
+  position:relative;
+  z-index:1;
+}
+
+.contactCard p{
+  color:#444;
+  font-size:16px;
+  margin:0;
+  line-height:1.6;
+  position:relative;
+  z-index:1;
+}
+
+.iconBox{
+  width:70px;
+  height:70px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:white;
+  background:linear-gradient(145deg,#ffd700,#caa300);
+  box-shadow:0 6px 14px rgba(0,0,0,0.2);
+  transition:0.4s;
+  position:relative;
+  z-index:1;
+}
+
+.contactCard:hover .iconBox{
+  transform: scale(1.2);
+  box-shadow:0 10px 25px rgba(218,165,32,0.4);
+}
+</style>
+
+<script>
+function callNow(){
+  window.location.href="tel:+923364454964";
+}
+
+function sendEmail(){
+  window.location.href="mailto:fashioplanet.official1@gmail.com";
+}
+
+function openMap(){
+  window.open("https://maps.google.com?q=52-Riwaz+Garden+Lower+Mall+Lahore+Punjab+Pakistan");
+}
+</script>
+
+
+
+<!-- PREMIUM CONTACT FORM SECTION -->
+<section id="contactForm" style="font-family:'Times New Roman',serif; background:#fffdf6; padding:60px 15px; position:relative; overflow:hidden;">
+
+  <div style="max-width:700px; margin:auto; text-align:center;">
+    <h2 style="font-size:36px; margin-bottom:10px; color:#b8860b;">Get in Touch</h2>
+    <div style="width:80px;height:4px;background:#ffd700;margin:10px auto 50px auto;border-radius:5px;"></div>
+    <section id="aboutSafa" style="font-family:'Times New Roman',serif; background:#fffdf6; padding:0px 0px; position:relative;">
+  
+    <p style="font-size:16px; color:#444; line-height:1;padding-bottom: 0;">
+      At SAFA'Z Beauty, we craft skincare that truly cares for your skin. Each product is designed to nourish, rejuvenate, and enhance your natural glow.  
+      Have questions about our products or want personalized advice? <strong>Reach out to us today!</strong> Our team is ready to assist you and help you choose the perfect skincare routine.  
+      Your radiant skin is just a message away.
+    </p>
+
+  </div>
+</section>
+
+    <!-- FORM START -->
+    <form id="premiumForm" style="background: linear-gradient(145deg,#fffdf6,#fff9e6); padding:30px; border-radius:22px; box-shadow:0 10px 35px rgba(218,165,32,0.15),0 20px 50px rgba(0,0,0,0.08);" onsubmit="sendPremiumForm(event)">
+
+      <div style="display:flex; flex-direction:column; gap:20px;">
+
+        <!-- Name -->
+        <input type="text" name="name" placeholder="Your Name" required 
+          style="padding:15px 20px; border-radius:12px; border:1px solid #ffe08a; font-size:16px; outline:none;">
+
+        <!-- Contact Number -->
+        <input type="tel" name="contact" placeholder="Contact Number" required
+          style="padding:15px 20px; border-radius:12px; border:1px solid #ffe08a; font-size:16px; outline:none;">
+
+        <!-- Dropdown Option -->
+        <select name="interest" required
+          style="padding:15px 20px; border-radius:12px; border:1px solid #ffe08a; font-size:16px; outline:none;">
+          <option value="" disabled selected>Select to Let us know </option>
+          <option value="existingCustomer">I am an existing customer</option>
+          <option value="willingToBuy">I am willing to buy</option>
+          <option value="justInquiry">Just inquiry</option>
+        </select>
+
+        <!-- Message -->
+        <textarea name="message" placeholder="Your Message" rows="6" required
+          style="padding:15px 20px; border-radius:12px; border:1px solid #ffe08a; font-size:16px; outline:none;"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" 
+          style="padding:15px; border:none; border-radius:12px; background:linear-gradient(145deg,#ffd700,#caa300); color:white; font-size:18px; font-weight:bold; cursor:pointer; transition:0.4s;">
+          Send Message
+        </button>
+
+      </div>
+    </form>
+    <!-- FORM END -->
+
+    <p id="formStatus" style="margin-top:15px; font-size:16px; color:#444;"></p>
+  </div>
+</section>
+
+<!-- ICON CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+function sendPremiumForm(event){
+  event.preventDefault();
+
+  const form = document.getElementById('premiumForm');
+  const name = form.name.value;
+  const contact = form.contact.value;
+  const interest = form.interest.value;
+  const message = form.message.value;
+
+  // Mailto link with new fields
+  const mailtoLink = `mailto:fashionplanet.official1@gmail.com?subject=${encodeURIComponent(interest)}&body=${encodeURIComponent(`Name: ${name}\nContact: ${contact}\nInterest: ${interest}\n\nMessage:\n${message}`)}`;
+
+  window.location.href = mailtoLink;
+
+  // Show status
+  document.getElementById('formStatus').innerText = "Your message is ready to send! Please check your email client.";
+}
+</script>
+
+<style>
+/* RESPONSIVE & PREMIUM STYLING */
+#premiumForm input, #premiumForm select, #premiumForm textarea{
+  width:100%;
+  box-sizing:border-box;
+}
+
+#premiumForm button:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(218,165,32,0.5);
+  background:linear-gradient(145deg,#ffe08a,#ffd700);
+}
+
+@media(max-width:768px){
+  #premiumForm{
+    padding:25px;
+  }
+  #premiumForm h2{
+    font-size:30px;
+  }
+}
+</style>
+<style>
+@keyframes moveText {
+    0% { transform: translateX(2%); }   /* Start offscreen right */
+    100% { transform: translateX(-100%); } /* Move fully left */
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 100%; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    div[style*="white-space: nowrap;"] {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+</style>
+
+<!-- SAFA'Z BEAUTY LOCATION SECTION - PREMIUM & MOBILE FRIENDLY -->
+<section id="location" style="font-family:'Times New Roman',serif; background:#fffdf6; padding:50px 15px; position:relative;">
+  <div style="max-width:800px; margin:auto; text-align:center;">
+
+    <h2 style="font-size:32px; margin-bottom:10px; color:#b8860b;">Our Location</h2>
+    <div style="width:60px;height:4px;background:#ffd700;margin:10px auto 30px auto;border-radius:5px;"></div>
+
+    <p style="font-size:16px; color:#444; margin-bottom:30px; line-height:1.6;">
+      Visit SAFA'Z Beauty at our store and experience the luxury of our skincare products in person.  
+      We are located in the heart of Lahore and look forward to welcoming you!
+    </p>
+
+    <!-- GOOGLE MAP -->
+    <div style="border: 3px solid #ffd700; border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(218,165,32,0.2);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13655.430587192027!2d74.3518471!3d31.4912264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919014fc0d3ed31%3A0xd846a7c0317d8a43!2s52%20Riwaz%20Garden%2C%20Lower%20Mall%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+        style="border:0; width:100%; height:400px; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* MOBILE OPTIMIZATION */
+@media(max-width:768px){
+  #location h2{
+    font-size:28px;
+  }
+  #location p{
+    font-size:15px;
+  }
+  #location iframe{
+    height:300px; /* smaller height for mobile screens */
+  }
+}
+</style>
+
+
+<!-- Footer Start -->
+<div class="container-fluid footer" style="background-color: #ffe880;">
+    <div class="container py-5">
+        <div class="row g-5">
+
+    <div style="font-family:'Times New Roman',serif; text-align:center; padding:20px 15px; background:#fffdf6; border-radius:15px; box-shadow:0 6px 18px rgba(0,0,0,0.08); max-width:420px; margin:auto;">
+
+    <a href="index.html" style="text-decoration:none; color:#000;">
+        <img src="logo.jpg" alt="SAFA'z Beauty Logo" 
+        style="height:65px; width:auto; margin-bottom:8px;">
+
+        <h3 style="margin:5px 0; font-weight:bold; color:#b8860b; letter-spacing:1px;">
+            SAFA'z Beauty
+        </h3>
+    </a>
+
+    <div style="width:60px; height:3px; background:#ffd700; margin:8px auto 12px auto; border-radius:3px;"></div>
+
+    <p style="font-size:15px; line-height:1.6; color:#444; margin:0;">
+        Discover the luxurious world of <b>SAFA'Z Skincare</b>. Our premium beauty
+        products are specially crafted to nourish, brighten, and rejuvenate your skin.
+        From powerful serums to deeply hydrating moisturizers, every formula is
+        designed to enhance your natural glow and keep your skin healthy, radiant,
+        and beautifully refreshed every day.
+    </p>
+
+</div>
+            <!-- Contact -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4" style="color: #ffc107; font-weight: bold;">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>52-Riwaz Garden Lower Mall Lahore, Punjab, Pakistan</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+92-3364454964 </p>
+                <p><i class="fa fa-envelope me-3"></i>fashioplanet.official1@gmail.com</p>
+                   <a class="btn btn-square me-1" href="https://wa.me/923364454964" target="_blank" style="border: 2px solid #ffc107; color: #ffc107;">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<a class="btn btn-square me-1" href="#" style="border: 2px solid #ffc107; color: #ffc107;">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a class="btn btn-square me-1" href="#" style="border: 2px solid #ffc107; color: #ffc107;">
+    <i class="fab fa-instagram"></i>
+</a>
+<br>
+       
+<div class="tiktok-section py-4" style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ccc;">
+  
+    <h2 style="color: #ffc107; text-align: center; margin-bottom: 20px;">Follow Us on TikTok</h2>
+
+    <!-- TikTok Profile for Safa Butt -->
+    <div class="tiktok-profile mb-3" style="border: 1px solid #ffc107; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <a href="https://www.tiktok.com/@safabutt199?_r=1&_d=f1cgl947m0f4eg&sec_uid=MS4wLjABAAAAsdj8WlvEdbYKRN0bF4_ckWOTsSiWCbR8Lj7CTpUMj5lyYLqFkqpTyzdRywO4mCcs&share_author_id=7022706857421652998&sharer_language=en&source=h5_m&u_code=dlac106cg1bdf" style="text-decoration: none; color: #333;">
+                <strong>Follow Safa Butt on TikTok</strong>
+            </a>
+            <p style="margin: 5px 0; color: #333;">Followers: 82.2K</p>
+            <p style="margin: 5px 0; color: #333;">Following: 313</p>
+            <p style="margin: 5px 0; color: #333;">Likes: 1.4M</p>
+            <p style="margin: 5px 0; color: #333;">Watch awesome short videos created by Safa Butt.</p>
+        </div>
+       
+    </div>
+
+    <!-- TikTok Profile for Fashion Planet -->
+    <div class="tiktok-profile" style="border: 1px solid #ffc107; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <a href="https://www.tiktok.com/@fashion_planet.official?_r=1&_t=ZG-94WbKDpZwLg" style="text-decoration: none; color: #333;">
+
+                <strong>Follow Fashion_planet on TikTok</strong>
+            </a>
+            <p style="margin: 5px 0; color: #333;">Followers: 11.9K</p>
+            <p style="margin: 5px 0; color: #333;">Following: 263</p>
+            <p style="margin: 5px 0; color: #333;">Likes: 171.7K</p>
+            <p style="margin: 5px 0; color: #333;">Watch awesome short videos created by Fashion Planet.</p>
+        </div>
+       
+    </div>
+</div>
+
         
-
-    <!-- Newsletter Start -->
-    <div class="container-fluid newsletter bg-primary py-5 my-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="text-white mb-3"><span class="fw-light text-dark">Let's Subscribe</span> The Newsletter</h1>
-                <p class="text-white mb-4">Subscribe now to get 30% discount on any of our products</p>
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-7 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="position-relative w-100 mt-3 mb-2">
-                        <input class="form-control w-100 py-4 ps-4 pe-5" type="text" placeholder="Enter Your Email"
-                            style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-white fs-4"></i></button>
-                    </div>
+
+            <!-- Products -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="mb-4" style="color: #ffc107; font-weight: bold;">Our Products</h5>
+                <a class="d-block mb-2" href="#" style="color: #000;">Hand and Foot Cream</a>
+                <a class="d-block mb-2" href="#" style="color: #000;">Soothing Lotion</a>
+                <a class="d-block mb-2" href="#" style="color: #000;">Eyeshadows</a>
+                <a class="d-block mb-2" href="#" style="color: #000;">Shiner</a>
+                <a class="d-block mb-2" href="#" style="color: #000;">Serums</a>
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="mb-4" style="color: #ffc107; font-weight: bold;">Pages</h5>
+                <a class="d-block mb-2" href="about.html" style="color: #000;">About Us</a>
+                <a class="d-block mb-2" href="contact.html" style="color: #000;">Contact Us</a>
+                <a class="d-block mb-2" href="product.html" style="color: #000;">Products</a>
+                <a class="d-block mb-2" href="index.html" style="color: #000;">Home</a>
+               
+            </div>
+ <!-- Copyright -->
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright py-3" style="border-top: 1px solid #ffc107;">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#" style="color: #ffc107; font-weight: bold;">safazbeauty.com</a>, All Rights Reserved.
+                    Designed By 
+                    <a href="" style="color: #ffc107; font-weight: bold;">Safa'z Developer</a>
+                </div>
+        </div>
+    </div>
+
+   
+
+                
                 </div>
             </div>
         </div>
     </div>
-    <!-- Newsletter End -->
+</div>
+<!-- Footer End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-white footer">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-primary">Hairnic</h1>
-                    </a>
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non
-                        malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus.</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="mb-4">Our Products</h5>
-                    <a class="btn btn-link" href="">Hair Shining Shampoo</a>
-                    <a class="btn btn-link" href="">Anti-dandruff Shampoo</a>
-                    <a class="btn btn-link" href="">Anti Hair Fall Shampoo</a>
-                    <a class="btn btn-link" href="">Hair Growing Shampoo</a>
-                    <a class="btn btn-link" href="">Anti smell Shampoo</a>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Career</a>
-                </div>
-            </div>
-        </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-lg-square back-to-top"
+   style="background-color: #ffc107; color: #fff;">
+    <i class="bi bi-arrow-up"></i>
+</a>
 
-                        <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+<script>
+function openSidebar() {
+    document.getElementById("sidebar").style.left = "0"; // Open from left
+    document.getElementById("overlay").style.display = "block";
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").style.left = "-260px"; // Hide to the left
+    document.getElementById("overlay").style.display = "none";
+}
+
+// Close sidebar when pressing ESC key
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeSidebar();
+    }
+});
+ const image = document.querySelector('.glowing-image');
+
+    function addGlow() {
+        image.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.7)'; // Golden glow
+    }
+
+    function removeGlow() {
+        image.style.boxShadow = 'none'; // Remove glow
+    }
+
+    // Event listener to add glow on hover
+    image.addEventListener('mouseover', addGlow);
+    image.addEventListener('mouseout', removeGlow);
+</script>
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
